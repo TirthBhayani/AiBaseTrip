@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:background="@drawable/card_bg"
+    android:layout_marginBottom="10dp">
+
+    <ImageView
+        android:id="@+id/imageHotel"
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:scaleType="centerCrop"
+
+        android:src="@drawable/ic_google" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvHotelName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Snow Valley Resorts"
+            android:textStyle="bold"
+            android:textSize="16sp"/>
+
+<!--        <TextView-->
+<!--            android:id="@+id/hotelLocation"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Location: Manali"-->
+<!--            android:textColor="#555"/>-->
+
+        <TextView
+            android:id="@+id/tvHotelDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="₹3,000 per night"
+            android:textColor="#009688"
+            android:textStyle="bold"/>
+    </LinearLayout>
+</LinearLayout>

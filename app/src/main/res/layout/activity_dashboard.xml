@@ -1,0 +1,186 @@
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/refresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Your existing ConstraintLayout inside SwipeRefreshLayout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dashboardLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/edittext_bg"
+        android:padding="16dp"
+        android:fitsSystemWindows="true">
+
+        <!-- Top Toolbar -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/topToolbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/dark_text_black"
+            app:title="🌍 AI Trip Planner"
+            app:titleTextColor="@color/white"
+            app:subtitleTextColor="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Welcome Text -->
+        <TextView
+            android:id="@+id/welcomeText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Welcome, Tirth 👋"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/Black"
+            app:layout_constraintTop_toBottomOf="@id/topToolbar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <!-- Search bar -->
+        <EditText
+            android:id="@+id/searchDestination"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:hint="Search a destination"
+            android:drawableStart="@android:drawable/ic_menu_search"
+            android:paddingStart="16dp"
+            android:background="@drawable/search_background"
+            android:textColor="#000"
+            android:textColorHint="#666"
+            app:layout_constraintTop_toBottomOf="@id/welcomeText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" />
+
+        <!-- AI Smart Trip Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/smartTripCard"
+            android:layout_width="0dp"
+            android:layout_height="180dp"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="12dp"
+            android:backgroundTint="#FAFAFA"
+            app:layout_constraintTop_toBottomOf="@id/searchDestination"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your Smart AI Trip"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#222" />
+
+                <TextView
+                    android:id="@+id/smartTripInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Saved: Manali, 5 Days, ₹15,000"
+                    android:textSize="15sp"
+                    android:textColor="#555"
+                    android:layout_marginTop="10dp" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="16dp">
+
+                    <!-- Share AI Plan Button -->
+                    <Button
+                        android:id="@+id/viewTripButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:text="Share Plan"
+                        android:backgroundTint="@color/dark_text_black"
+                        android:textColor="#FFF"
+                        android:drawableLeft="@android:drawable/ic_menu_share"
+                        android:layout_marginEnd="16dp" />
+
+                    <!-- Export as PDF Button -->
+                    <Button
+                        android:id="@+id/exportPdfButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="45dp"
+                        android:backgroundTint="@color/dark_text_black"
+                        android:drawableLeft="@android:drawable/ic_menu_save"
+                        android:text="Export PDF"
+                        android:textColor="#FFF" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Quick Action Buttons -->
+        <LinearLayout
+            android:id="@+id/quickAccess"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:weightSum="3"
+            app:layout_constraintTop_toBottomOf="@id/smartTripCard"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <Button
+                android:id="@+id/btnGoals"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_button_bg"
+                android:backgroundTint="@color/dark_text_black"
+                android:drawableTop="@android:drawable/ic_menu_agenda"
+                android:gravity="center"
+                android:iconTint="@android:color/white"
+                android:text=" Trip Goals / Checklist"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/btnNewPlan"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_button_bg"
+                android:backgroundTint="@color/dark_text_black"
+                android:drawableTop="@android:drawable/ic_input_add"
+                android:gravity="center"
+                android:text="Create Plan"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btnHistory"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:text="History"
+                android:textAllCaps="false"
+                android:backgroundTint="@color/dark_text_black"
+                android:background="@drawable/rounded_button_bg"
+                android:textColor="@color/white"
+                android:drawableTop="@android:drawable/ic_menu_recent_history"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

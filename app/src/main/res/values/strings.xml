@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">AiBaseTrip</string>
+    <string name="default_web_client_id">481098032709-blicru88mn32efm421e7k0o802jn52v6.apps.googleusercontent.com</string>
+
+    <string-array name="traveling_with_array">
+        <item>Solo</item>
+        <item>Couple</item>
+        <item>Family</item>
+        <item>Friends</item>
+        <item>Group</item>
+    </string-array>
+
+</resources>

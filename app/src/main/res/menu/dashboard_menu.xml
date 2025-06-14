@@ -1,0 +1,27 @@
+<!-- res/menu/dashboard_menu.xml -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_profile"
+        android:title="Profile"
+        android:icon="@android:drawable/ic_menu_myplaces"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_settings"
+        android:title="Settings"
+        android:icon="@android:drawable/ic_menu_preferences"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_logout"
+        android:title="Logout"
+        android:iconTint="@color/white"
+        android:icon="@android:drawable/ic_lock_power_off"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_more"
+        android:title="More Options"
+        app:showAsAction="never" />
+
+</menu>

@@ -1,0 +1,35 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="@drawable/card_bg"
+    android:layout_marginBottom="10dp">
+
+    <!-- Image -->
+    <ImageView
+        android:id="@+id/imgLocation"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"/>
+
+
+    <!-- Day & Activities -->
+    <TextView
+        android:id="@+id/tvDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Day 1: Arrival in Manali"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/tvActivities"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Check-in and explore Mall Road"
+        android:textSize="14sp"
+        android:textColor="#555"
+        android:layout_marginTop="4dp"/>
+</LinearLayout>
