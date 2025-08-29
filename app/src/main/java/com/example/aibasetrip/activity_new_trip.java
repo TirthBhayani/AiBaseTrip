@@ -30,7 +30,7 @@ public class activity_new_trip extends AppCompatActivity {
     Button btnCreateTrip;
     ProgressDialog progressDialog;
 
-    final String DEEPSEEK_API_KEY = "sk-c2b99f60238540e284b6b8d97592e6f4"; // replace with your actual key
+    final String DEEPSEEK_API_KEY= getString(R.string.deepseekapi); // replace with your actual key
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
